@@ -43,6 +43,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p,
+li,
+h1,
+h2,
+h3,
+h4 {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 /* Animations */
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(24px); }
@@ -198,8 +208,8 @@ h1, h2, h3, h4 {
 /* Hero Section */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 380px;
-  gap: 72px;
+  grid-template-columns: minmax(0, 1.15fr) 340px;
+  gap: 88px;
   align-items: center;
   min-height: 100vh;
   padding: 100px 0;
@@ -211,7 +221,7 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  max-width: 760px;
+  max-width: 700px;
 }
 
 .hero-image-wrapper {
@@ -262,13 +272,12 @@ h1, h2, h3, h4 {
 }
 
 .hero-intro {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
+  display: block;
   font-size: clamp(1.35rem, 2.2vw, 1.9rem);
   color: var(--text-main);
   font-weight: 500;
+  line-height: 1.6;
+  max-width: 24em;
 }
 
 .hero-intro-label {
@@ -278,18 +287,22 @@ h1, h2, h3, h4 {
   padding: 6px 14px;
   background-color: #f3f4f6;
   font-weight: 800;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  vertical-align: middle;
 }
 
 .hero-intro-text {
   line-height: 1.6;
+  display: inline;
 }
 
 .hero-description {
   font-size: 1.1rem;
   color: var(--text-muted);
   font-weight: 400; /* Explicitly set body weight */
-  max-width: 720px;
-  line-height: 1.6; /* Loosen line height on hero body */
+  max-width: 60ch;
+  line-height: 1.75; /* Loosen line height on hero body */
   margin-top: 8px;
 }
 
@@ -390,7 +403,8 @@ h1, h2, h3, h4 {
 .section-head p {
   color: var(--text-muted);
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.75;
+  max-width: 60ch;
 }
 
 /* Grids */
@@ -435,8 +449,8 @@ h1, h2, h3, h4 {
 .editorial-header p {
   font-size: 1.15rem;
   color: var(--text-muted);
-  max-width: 640px;
-  line-height: 1.6;
+  max-width: 60ch;
+  line-height: 1.75;
 }
 
 .editorial-layout {
@@ -470,7 +484,7 @@ h1, h2, h3, h4 {
   font-size: 1.28rem;
   color: var(--text-main);
   line-height: 1.85;
-  max-width: 900px;
+  max-width: 58ch;
   margin-bottom: 60px;
 }
 .product-scope-intro strong {
@@ -567,9 +581,10 @@ h1, h2, h3, h4 {
 }
 .ed-desc {
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.75;
   color: var(--text-muted);
   margin-bottom: 40px;
+  max-width: 34ch;
 }
 .ed-divider {
   height: 1px;
@@ -654,11 +669,12 @@ h1, h2, h3, h4 {
 
 .about-main-text {
   font-size: 1.45rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-main);
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-bottom: 48px;
+  max-width: 28ch;
 }
 
 .about-divider {
@@ -697,7 +713,8 @@ h1, h2, h3, h4 {
 .about-point-item p {
   font-size: 1.05rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.75;
+  max-width: 58ch;
 }
 
 /* Right Column */
@@ -753,7 +770,7 @@ h1, h2, h3, h4 {
 
 .about-card-text {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.75;
   color: var(--text-muted);
 }
 
@@ -839,13 +856,14 @@ h1, h2, h3, h4 {
 .timeline-section li {
   color: var(--text-main);
   font-size: 1.08rem;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
 .timeline-item p {
   color: var(--text-main);
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.75;
+  max-width: 60ch;
 }
 
 .timeline-section li + li {
@@ -1272,7 +1290,7 @@ h1, h2, h3, h4 {
 .resume-col-desc {
   font-size: 1rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.75;
   font-weight: 500;
 }
 .resume-col-desc p {
@@ -1339,6 +1357,10 @@ h1, h2, h3, h4 {
     margin: 0 auto;
     height: 440px;
   }
+
+  .hero-copy {
+    max-width: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1373,9 +1395,11 @@ h1, h2, h3, h4 {
   }
   .hero-intro {
     font-size: 1.2rem;
+    max-width: none;
   }
   .hero-description {
     font-size: 1rem;
+    max-width: none;
   }
   .editorial-header {
     margin-bottom: 60px;
@@ -1428,6 +1452,7 @@ h1, h2, h3, h4 {
   }
   .about-main-text {
     font-size: 1.25rem;
+    max-width: none;
   }
   .footer-elegant {
     padding: 80px 0 100px;
