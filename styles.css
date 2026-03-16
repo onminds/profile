@@ -449,8 +449,9 @@ h1, h2, h3, h4 {
 .editorial-header p {
   font-size: 1.15rem;
   color: var(--text-muted);
-  max-width: 60ch;
+  max-width: none;
   line-height: 1.75;
+  white-space: nowrap;
 }
 
 .editorial-layout {
@@ -1411,6 +1412,9 @@ h1, h2, h3, h4 {
   }
   .editorial-header h2 {
     font-size: 2.6rem;
+  }
+  .editorial-header p {
+    white-space: normal;
   }
   .product-scope-wrapper h2 {
     font-size: 2.2rem;
