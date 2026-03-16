@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | MOA AI Product Developer</title>
+    <meta
+      name="description"
+      content="통합 AI 플랫폼 MOA를 중심으로 정리한 개인 포트폴리오 웹사이트"
+    />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#hero">
+          <span class="brand-mark">P</span>
+          <span class="brand-text">Portfolio</span>
+        </a>
+        <nav class="nav">
+          <a href="#project">프로젝트</a>
+          <a href="#experience">경력 및 이력</a>
+          <a href="#vision">프로필</a>
+          <a href="#stack">기술 스택</a>
+          <a href="#contact">연락처</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="테마 전환">
+          Dark
+        </button>
+      </header>
+
+      <main>
+        <section id="hero" class="hero section">
+          <div class="hero-copy">
+            <p class="hero-kicker" id="heroEyebrow"></p>
+            <h1 id="heroTitle"></h1>
+            <div class="hero-divider" aria-hidden="true"></div>
+            <p class="hero-intro">
+              <span class="hero-intro-label" id="heroIntroLabel"></span>
+              <span class="hero-intro-text" id="heroIntroText"></span>
+            </p>
+            <p class="hero-description" id="heroDescription"></p>
+          </div>
+          <aside class="hero-image-wrapper">
+            <!-- 사진 파일은 profile/profile-photo.jpg 경로에 넣어주세요 -->
+            <img src="./profile-photo.jpg" alt="오명훈 프로필 사진" class="hero-profile-img" />
+          </aside>
+        </section>
+
+        <section id="project" class="section">
+          <div class="editorial-layout-wrapper">
+            <div class="editorial-header">
+              <span class="editorial-eyebrow">Project Overview</span>
+              <h2>무엇을 만들었는지 한눈에</h2>
+              <p>실제 코드베이스를 기준으로 어떤 구조의 제품 라인업을 만들었는지 한눈에 보이도록 정리한 섹션입니다.</p>
+            </div>
+            <div class="editorial-layout" id="editorialLayout"></div>
+            
+            <div class="product-scope-wrapper">
+              <span class="editorial-eyebrow">PRODUCT SCOPE</span>
+              <h2>이 프로젝트에서 제가 다룬 범위</h2>
+              
+              <div class="product-scope-card">
+                <p class="product-scope-intro">이 프로젝트에서 저는 랜딩 페이지 한두 개를 만든 것이 아니라, 실제 사용자가 쓰는 AI 제품 전체를 설계하고 구현했습니다. 메인 홈과 검색/채팅 UX, AI 도구 상세, 생산성 도구군, 커뮤니티, 프로필/설정, 플랜 결제 화면 같은 프론트엔드부터, 추천·생성·스트리밍·업로드·OCR·코드 분석 API, 구독/사용량/결제 정책, Google·Apple 인앱결제, 커뮤니티 신고/운영, MSSQL 기반 데이터 구조까지 서비스 전반을 직접 다룬 프로젝트입니다.</p>
+                
+                <div class="product-scope-grid">
+                  <div class="product-scope-column">
+                    <h3>사용자 경험</h3>
+                    <ul class="product-scope-list">
+                      <li>메인 홈, About, 정책/가이드, 온보딩, 앱 다운로드 유도까지 포함한 서비스 진입 경험 설계</li>
+                      <li>AI 검색 페이지, AI 도구 목록/상세, 필터·태그·정렬·페이지네이션, 관리자 도구 등록 UI 구현</li>
+                      <li>AI 종합 채팅과 검색 채팅의 이중 구조 설계, 스트리밍 메시지와 카드형 결과 UX 구현</li>
+                      <li>생산성 도구군 9종 구성: 요약, 레포트, 자기소개서, 면접 준비, 강의 녹음 노트, PPT 초안, 발표 대본, 코드 생성, 코드 리뷰</li>
+                      <li>PPT 생성과 편집, 프로젝트 단위 코드 리뷰, 파일 업로드 기반 분석 UI 등 고난도 입력 경험 구현</li>
+                      <li>커뮤니티 목록/상세/글쓰기/수정, 가이드라인, 게시판 카테고리 흐름과 운영성 있는 UX 구현</li>
+                      <li>프로필 편집, 아바타, 계정 삭제, 설정, 플랜/구독 상태 확인 등 사용자 계정 경험 전반 구현</li>
+                    </ul>
+                  </div>
+                  <div class="product-scope-column">
+                    <h3>백엔드/운영</h3>
+                    <ul class="product-scope-list">
+                      <li>Next.js API Routes 기반으로 검색, 채팅, 생성, 업로드, 문서 처리, 코드 리뷰, 커뮤니티, 관리자 기능까지 서버 로직 전반 구현</li>
+                      <li>AI 추천/검색 라우팅, 멀티모델 채팅, 스트리밍 응답, 구조화 카드 파싱, 도구 설명 생성 로직 설계</li>
+                      <li>이미지/영상 생성 API, 문서 OCR, 프레젠테이션 스크립트, 슬라이드 생성, 프로젝트 업로드/분석 파이프라인 구현</li>
+                      <li>TossPayments 주문 생성, 정기결제, 수동 청구, 결제 상태 조회, 구독 취소/다운그레이드 등 결제 수명주기 구현</li>
+                      <li>사용량 제한과 리셋 정책을 서비스별로 설계하고, 이미지/영상/생산성 도구 한도 관리 로직 구현</li>
+                      <li>모바일 인증, 모바일 사용량 조회, Google IAP 검증, Apple IAP 검증/복구, App Store 서버 웹훅 처리 구현</li>
+                      <li>MSSQL 연결 풀, 트랜잭션, 사용자/구독/결제/사용량/커뮤니티/신고 데이터 저장 구조 운영</li>
+                      <li>커뮤니티 신고, 공지 권한 제어, 관리자 기능, 운영용 API까지 포함한 서비스 운영 레이어 구현</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="section">
+          <div class="section-head">
+            <p class="eyebrow">Experience</p>
+            <h2>경력과 주요 성과</h2>
+          </div>
+          <div class="timeline" id="careerTimeline"></div>
+        </section>
+
+        <section class="section resume-section">
+          <div class="resume-container" id="resumeContainer">
+            <!-- Rendered by JS -->
+          </div>
+          <div class="resume-watermark" id="resumeWatermark">OH MYUNG-HOON PORTFOLIO</div>
+        </section>
+
+        <section id="vision" class="section about-summary-section">
+          <div class="editorial-header" style="margin-bottom: 60px;">
+            <span class="editorial-eyebrow">Profile & Vision</span>
+            <h2>어떤 개발자이고, 어디로 향하는가</h2>
+          </div>
+          <div class="about-summary-container">
+            <!-- Rendered by JS -->
+          </div>
+        </section>
+
+        <section id="stack" class="section">
+          <div class="section-head">
+            <p class="eyebrow">Tech Stack</p>
+            <h2>기술 스택</h2>
+            <p>
+              프론트엔드만이 아니라 인증, 결제, 데이터베이스, 모바일, AI API
+              연동까지 포함한 풀스택 구성이 드러나도록 정리했습니다.
+            </p>
+          </div>
+          <div class="stack-grid" id="stackGrid"></div>
+        </section>
+
+      </main>
+
+      <footer id="contact" class="footer footer-elegant">
+        <div class="footer-content-left">
+          <div class="footer-quote-icon">“</div>
+          <h2 class="footer-message">
+            기획부터 배포까지 프로덕트 전체를 책임지고,<br>
+            사용자의 문제를 실질적으로 해결하는<br>
+            <span class="highlight-underline">대체 불가능한 풀스택 메이커</span>로 성장하겠습니다.
+          </h2>
+          <div class="footer-profile">
+            <strong id="footerName" class="footer-name"></strong>
+            <span id="footerRole" class="footer-role"></span>
+          </div>
+          
+          <div class="footer-contact-info">
+            <p class="footer-eyebrow">CONTACT</p>
+            <div id="footerLinksList" class="footer-links-list"></div>
+          </div>
+        </div>
+        <div class="footer-visual-right">
+          <img src="./profile-photo.jpg" alt="오명훈 프로필" />
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
