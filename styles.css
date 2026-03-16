@@ -96,7 +96,7 @@ h1, h2, h3, h4 {
 .site-shell {
   width: min(1080px, calc(100vw - 48px));
   margin: 0 auto;
-  padding: 0;
+  padding: 0 16px;
 }
 
 /* Topbar */
@@ -111,7 +111,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0;
+  padding: 24px 16px;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -1367,7 +1367,7 @@ h1, h2, h3, h4 {
 @media (max-width: 768px) {
   .topbar {
     flex-wrap: wrap;
-    padding: 20px 0;
+    padding: 20px 16px;
   }
   .nav {
     width: 100%;
