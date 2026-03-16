@@ -8,7 +8,7 @@ const portfolio = {
     description:
       "아이디어를 실제 서비스로 만들기 위해 기획, 디자인, 개발, 결제, 배포, 앱스토어 출시까지 직접 연결해왔습니다. 사용자가 실제로 쓰는 AI 제품을 만들고, 기술과 비즈니스를 함께 전진시키는 데 강점이 있습니다.",
     email: "hooney1218@gmail.com",
-    github: "https://github.com/hooney1211",
+    github: "https://github.com/hooney121",
     blog: "",
     serviceUrl: "https://www.moa.tools/ad",
   },
